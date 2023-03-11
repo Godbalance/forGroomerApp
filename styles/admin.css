@@ -1,0 +1,37 @@
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+
+table caption {/*параметры описания таблицы*/
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+}
+
+table tr {/*параметры строк*/
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: .35em;
+}
+
+table th,
+table td {/*need*/
+    padding: 8px;
+    text-align: center;
+}
+
+table th {/*need*/
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+/* general styling */
+body {/*need?*/
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.25;
+}

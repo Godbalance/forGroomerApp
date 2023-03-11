@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin</title>
+    <link rel="stylesheet" href="/styles/admin.css">
+</head>
+<body>
+<table>
+    <caption>Statement Summary</caption>
+    <tbody>
+    <form action="/set" method="post">
+        <tr>
+            <th><input type="text" name="path" id="path" placeholder="path" class="input"><br></th>
+            <th><input type="text" name="image" id="image" placeholder="image" class="input"><br></th>
+            <th><input type="text" name="brand" id="brand" placeholder="brand" class="input"><br></th>
+            <th><input type="text" name="size" id="size" placeholder="size" class="input"><br></th>
+            <th><input type="number" name="price" id="price" placeholder="price" class="input"><br></th>
+            <th><input type="number" name="stock" id="stock" placeholder="stock" class="input"><br></th>
+            <th>
+                <button>set</button>
+            </th>
+        </tr>
+    </form>
+
+    {{range .}}
+        {{if ne .Stock 0}}
+            <tr>
+                <td>here will be</td>
+                <td>{{.Image}}</td>
+                <td>{{.Brand}}</td>
+                <td>{{.Size}}</td>
+                <td>{{.Price}}</td>
+                <td>{{.Stock}}</td>
+                <td>
+                    <form>
+                        <input type="button" value="Edit" onclick="alert('You clicked the button!')">
+                    </form>
+                </td>
+            </tr>
+        {{end}}
+        {{if eq .Stock 0}}
+            <tr>
+                <td>here will be</td>
+                <td>{{.Image}}</td>
+                <td>{{.Brand}}</td>
+                <td>{{.Size}}</td>
+                <td>{{.Price}}</td>
+                <td>{{.Stock}}</td>
+                <td>
+                    <form>
+                        <input type="button" value="Edit" onclick="alert('You clicked the button!')">
+                    </form>
+                </td>
+            </tr>
+        {{end}}
+    {{end}}
+    </tbody>
+</table>
+
+
+</body>
+</html>

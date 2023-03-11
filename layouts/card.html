@@ -1,0 +1,19 @@
+{{ define "card"}}
+    <link rel="stylesheet" href="/styles/card.css">
+    <article class="card">
+        <img src="/res/{{.Image}}" alt="Hot air balloons">
+        <div>
+            <p class="description">{{.Size}} · {{.Price}}₽</p>
+        </div>
+        <div class="quantity">
+            <button class="btnMinus" id="btnMinus">-</button>
+            <button class="btnPlus" id="btnPlus">+</button>
+        </div>
+
+        <div class="count">
+            <p class="sum"><b>3</b></p>
+        </div>
+
+
+    </article>
+{{end}}
