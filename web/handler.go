@@ -17,6 +17,9 @@ func HandleRequest() {
 		return
 	}
 }
+func pro() {
+
+}
 
 //func setValue(w http.ResponseWriter, r *http.Request) {
 //	path := r.FormValue("path")

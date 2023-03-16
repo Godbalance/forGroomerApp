@@ -48,5 +48,6 @@ func GetRealtime() map[string]Product {
 func DelRealtime(path string) {
 	if err := InitRealtime().Child(path).Delete(context.Background()); err != nil {
 		log.Fatalln("Error deleting value:", err)
+		log.Fatalln("Error deleting value:", err)
 	}
 }
